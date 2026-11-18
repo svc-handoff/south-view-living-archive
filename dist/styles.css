@@ -456,8 +456,6 @@ html.motion-disabled { scroll-behavior: auto; }
 /* Editorial house style: citations remain part of each factual sentence. */
 .citation { font-size: .82em; line-height: 1.6; }
 .citation a { text-decoration-thickness: 1px; text-underline-offset: .2em; }
-.editorial-meta { margin: 24px 0 0; color: var(--muted); font-size: .8rem; line-height: 1.6; }
-.editorial-meta p { margin: .35em 0; }
 .biography-section { margin-top: 54px; }
 .biography-section > h2 { font-size: clamp(1.8rem, 3.5vw, 2.7rem); }
 .sources h2, .related-stories h2 { font-size: 1.65rem; margin-top: 0; }
@@ -475,7 +473,6 @@ html.motion-disabled { scroll-behavior: auto; }
 .collage-credits ul { margin: 10px 0 0; padding-left: 20px; }
 button.event-image-frame { width: 100%; padding: 0; border: 0; color: inherit; font: inherit; text-align: left; background: transparent; }
 @media (max-width: 600px) {
- .editorial-meta { font-size: .75rem; }
  .biography-section { margin-top: 36px; }
  .citation { overflow-wrap: anywhere; }
  .collage-credits { bottom: -42px; }

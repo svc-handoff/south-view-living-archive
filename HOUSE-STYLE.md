@@ -21,7 +21,7 @@ The 13 full biographies use this order:
 3. Atlanta and South-View Connection: 80–150 words, including a specific cemetery connection.
 4. Sources: at least four, including an archive, primary source, scholarly source, or book.
 
-Each biography also has the supplied Group C2 members, LMC 3403, term, last-updated date, three internal tags, and internal See also links. The authoring credit says “Prepared for Group C2” rather than asserting that the named students wrote every sentence.
+Each biography has three internal tags and internal See also links. Public pages omit the group byline, course and term credit, and last-updated date as requested. Editorial metadata remains in the content file for maintenance.
 
 ## Short remembrances and timeline entries
 
