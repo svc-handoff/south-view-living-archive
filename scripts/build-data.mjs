@@ -1,4 +1,5 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 
 const source = new URL('../dist/content.json', import.meta.url);
 const archive = JSON.parse(readFileSync(source, 'utf8'));
@@ -68,4 +69,16 @@ for (const event of archive.events) if (event.cardImage) {
 }
 if (!archive.editorial?.updated || !archive.editorial?.members?.length) throw new Error('Missing editorial attribution');
 writeFileSync(new URL('../dist/data.js', import.meta.url), `// Generated from content.json by node scripts/build-data.mjs\nwindow.ARCHIVE=${JSON.stringify(archive)};\n`);
+// Content hashes give every changed browser asset a fresh cache key.
+const indexURL = new URL('../dist/index.html', import.meta.url);
+let html = readFileSync(indexURL, 'utf8');
+for (const file of ['styles.css', 'data.js', 'experience.js', 'app.js']) {
+  const hash = createHash('sha256').update(readFileSync(new URL(`../dist/${file}`, import.meta.url))).digest('hex').slice(0, 12);
+  const attribute = file.endsWith('.css') ? 'href' : 'src';
+  const escapedFile = file.replaceAll('.', '\\.');
+  const reference = new RegExp(`${attribute}="${escapedFile}(?:\\?v=[^"]*)?"`, 'g');
+  if (!reference.test(html)) throw new Error(`Missing browser asset reference: ${file}`);
+  html = html.replace(reference, `${attribute}="${file}?v=${hash}"`);
+}
+writeFileSync(indexURL, html);
 console.log(`Validated ${archive.events.length} chapters and ${Object.keys(archive.people).length} profiles; regenerated dist/data.js.`);
