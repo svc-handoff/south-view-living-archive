@@ -25,3 +25,9 @@ Check [Actions](https://github.com/chrisnli/south-view-living-archive/actions) f
 The 25 profiles, three event chapters, and nine captioned visual-archive entries are authored in `dist/content.json`. After editing, run `node scripts/build-data.mjs` to validate the archive and regenerate the browser data file. Page rendering, interactive portraits and people constellations, story dialogs, and the image viewer are in `dist/app.js`; the shared landscape and motion controller are in `dist/experience.js`. Styling and artwork are in `dist/styles.css` and `dist/assets/`.
 
 See `dist/README.md` for research scope, source attribution, and burial-evidence limitations. This is a student concept, not an official cemetery publication.
+
+## House style and source checks
+
+The archive contains 13 full biographies and 12 short-form remembrances. The writing, citation rendering, source records, internal tags, bylines, and dates follow [HOUSE-STYLE.md](HOUSE-STYLE.md). Existing image credits and rights gaps are listed in `dist/asset-ledger.json`. [RESEARCH-NOTES.md](RESEARCH-NOTES.md) records the remaining evidence limits; `source-link-checks.json` records external link-check results.
+
+Run `node scripts/build-data.mjs` after editing. The validator also enforces the long-form word ranges, four-source minimum with archival or primary evidence, source coverage for factual paragraphs, and image-ledger coverage.

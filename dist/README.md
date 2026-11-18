@@ -26,8 +26,12 @@ Motion runs automatically throughout the site without an on-page toggle or saved
 
 ## Research and attribution
 
-The new chapters include seven victim remembrances, two contextual education profiles, and ten civil-rights and educational/professional equality profiles. Each new profile has its own sources and cemetery-connection explanation. The child victim burial list is explicitly attributed to secondary cemetery references; individual registers have not been inspected. Personal details are kept limited to sourced material. No guilt finding is claimed beyond the two adult-murder convictions.
+The archive includes 13 full biographies and 12 short-form remembrances. Each page has its own sources and cemetery-connection explanation. The child-victim burial list is attributed to the supplied Group C2 research citing Henderson, page six; that book page and the individual registers have not been independently inspected. Personal details are kept limited to sourced material. No guilt finding is claimed beyond the two adult-murder convictions.
 
 Jean Childs Young and Carolyn Dunbar Yancey are broader education context, not identified as victims or crisis responders. Benjamin Mays is a former South-View burial; his remains were reinterred at Morehouse. Existing archive portraits retain foundation-supplied credits; initials are used without a verified portrait. No generated victim portraits are used.
 
 Each event presents its people in one combined constellation. The 1906 chapter includes five victims alongside Alonzo Herndon, who survived and whose business was targeted; individual profiles explain these distinct connections. Expanded profiles cite the National Center for Civil and Human Rights, its WABE/PBS documentary, and biographical references. The profiles distinguish museum-reported records, documentary testimony, and unresolved details; this project has not independently inspected cemetery registers or original death records. This is a student concept, not an official cemetery website. Original image rights remain with their holders.
+
+## Editorial maintenance
+
+Follow `../HOUSE-STYLE.md`. The content validator enforces the full-biography word ranges and source requirements. Image credits and outstanding rights documentation are recorded in `asset-ledger.json`. `../RESEARCH-NOTES.md` records remaining evidence limits.

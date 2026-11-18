@@ -1,0 +1,361 @@
+{
+  "checked": "2026-11-17",
+  "note": "HTTP errors and bot protection do not establish that a source is missing. Protected institutional links require manual verification. Book page references are not HTTP links.",
+  "sources": [
+    {
+      "url": "https://album.atlantahistorycenter.com/digital/collection/LAohr/id/223",
+      "status": "unavailable",
+      "error": "ReadTimeout"
+    },
+    {
+      "url": "https://album.atlantahistorycenter.com/digital/collection/p17222coll54",
+      "status": "unavailable",
+      "error": "ConnectionError"
+    },
+    {
+      "url": "https://album.atlantahistorycenter.com/digital/collection/p17222coll55",
+      "status": "unavailable",
+      "error": "ReadTimeout"
+    },
+    {
+      "url": "https://amistadresearch.wordpress.com/2011/05/09/john-wesley-dobbs-family-papers-1873-2001/",
+      "status": 200,
+      "finalUrl": "https://amistadresearch.wordpress.com/2011/05/09/john-wesley-dobbs-family-papers-1873-2001/",
+      "blocked": false
+    },
+    {
+      "url": "https://canopyatlanta.org/2023/11/17/atlantans-share-their-familial-connections-to-south-view-cemetery/",
+      "status": 200,
+      "finalUrl": "https://canopyatlanta.org/2023/11/17/atlantans-share-their-familial-connections-to-south-view-cemetery/",
+      "blocked": false
+    },
+    {
+      "url": "https://dca.georgia.gov/document/newsletters/april-2016-reflectionspdf/download",
+      "status": 200,
+      "finalUrl": "https://dca.georgia.gov/document/newsletters/april-2016-reflectionspdf/download",
+      "blocked": false
+    },
+    {
+      "url": "https://digitalcollections.library.gsu.edu/digital/api/collection/ggdp/id/6088/download",
+      "status": "unavailable",
+      "error": "ReadTimeout"
+    },
+    {
+      "url": "https://dlg.usg.edu/record/auu_auc-078_auc-078-0137",
+      "status": 200,
+      "finalUrl": "https://dlg.usg.edu/record/auu_auc-078_auc-078-0137",
+      "blocked": false
+    },
+    {
+      "url": "https://dlg.usg.edu/record/auu_auc-199_auc-199-03986",
+      "status": 200,
+      "finalUrl": "https://dlg.usg.edu/record/auu_auc-199_auc-199-03986",
+      "blocked": false
+    },
+    {
+      "url": "https://dlg.usg.edu/record/dlg_aaed_aarl90-005-004-086",
+      "status": 200,
+      "finalUrl": "https://dlg.usg.edu/record/dlg_aaed_aarl90-005-004-086",
+      "blocked": false
+    },
+    {
+      "url": "https://dlg.usg.edu/record/geh_athpc_1190",
+      "status": 200,
+      "finalUrl": "https://dlg.usg.edu/record/geh_athpc_1190",
+      "blocked": false
+    },
+    {
+      "url": "https://dlg.usg.edu/record/geh_byd_353",
+      "status": 200,
+      "finalUrl": "https://dlg.usg.edu/record/geh_byd_353",
+      "blocked": false
+    },
+    {
+      "url": "https://dlg.usg.edu/record/nge_ngen_m-9860",
+      "status": 200,
+      "finalUrl": "https://dlg.usg.edu/record/nge_ngen_m-9860",
+      "blocked": false
+    },
+    {
+      "url": "https://findingaids.auctr.edu/repositories/2/resources/174",
+      "status": 200,
+      "finalUrl": "https://findingaids.auctr.edu/repositories/2/resources/174",
+      "blocked": false
+    },
+    {
+      "url": "https://findingaids.library.umass.edu/ead/mums411.pdf",
+      "status": "unavailable",
+      "error": "ConnectionError"
+    },
+    {
+      "url": "https://georgialibraries.omeka.net/s/central-state-hospital/page/african-american-nurses",
+      "status": 200,
+      "finalUrl": "https://georgialibraries.omeka.net/s/central-state-hospital/page/african-american-nurses",
+      "blocked": false
+    },
+    {
+      "url": "https://history.house.gov/Oral-History/People/Representative-Lewis/",
+      "status": 200,
+      "finalUrl": "https://history.house.gov/Oral-History/People/Representative-Lewis/",
+      "blocked": false
+    },
+    {
+      "url": "https://leading-edge.iac.gatech.edu/building-memories/southview-cemetery/",
+      "status": 200,
+      "finalUrl": "https://leading-edge.iac.gatech.edu/building-memories/southview-cemetery/",
+      "blocked": false
+    },
+    {
+      "url": "https://mmuf.unm.edu/program-overview/dr.-benjamin-mays-bio.html",
+      "status": 200,
+      "finalUrl": "https://mmuf.unm.edu/program-overview/dr.-benjamin-mays-bio.html",
+      "blocked": false
+    },
+    {
+      "url": "https://msm.smartcatalogiq.com/en/2025-2026/2025-2026-morehouse-school-of-medicine-student-handbook/graduate-education-in-nursing/about-the-nursing-program",
+      "status": 200,
+      "finalUrl": "https://msm.smartcatalogiq.com/en/2025-2026/2025-2026-morehouse-school-of-medicine-student-handbook/graduate-education-in-nursing/about-the-nursing-program",
+      "blocked": false
+    },
+    {
+      "url": "https://snccdigital.org/people/ruby-doris-smith-robinson/",
+      "status": 200,
+      "finalUrl": "https://snccdigital.org/people/ruby-doris-smith-robinson/",
+      "blocked": false
+    },
+    {
+      "url": "https://snccdigital.org/wp-content/uploads/digitalcollections/64_sncc_staff-jobs.pdf",
+      "status": 200,
+      "finalUrl": "https://snccdigital.org/wp-content/uploads/digitalcollections/64_sncc_staff-jobs.pdf",
+      "blocked": false
+    },
+    {
+      "url": "https://usg.edu/regents/past-regents/",
+      "status": 200,
+      "finalUrl": "https://usg.edu/regents/past-regents/",
+      "blocked": false
+    },
+    {
+      "url": "https://www.ajc.com/news/crime--law/atlanta-child-murders-who-were-the-victims/JzKvG4Yd4i2l0QGiURZ5XI/",
+      "status": 200,
+      "finalUrl": "https://www.ajc.com/news/crime--law/atlanta-child-murders-who-were-the-victims/JzKvG4Yd4i2l0QGiURZ5XI/",
+      "blocked": false
+    },
+    {
+      "url": "https://www.atlantaga.gov/Home/Components/News/News/14720/672",
+      "status": 403,
+      "finalUrl": "https://www.atlantaga.gov/Home/Components/News/News/14720/672",
+      "blocked": false
+    },
+    {
+      "url": "https://www.auctr.edu/archives-and-collections/digital-collections/",
+      "status": 403,
+      "finalUrl": "https://www.auctr.edu/archives-and-collections/digital-collections/",
+      "blocked": false
+    },
+    {
+      "url": "https://www.bates.edu/news/2013/03/10/benjamin-mays-living-legacy/",
+      "status": 200,
+      "finalUrl": "https://www.bates.edu/news/2013/03/10/benjamin-mays-living-legacy/",
+      "blocked": false
+    },
+    {
+      "url": "https://www.civilandhumanrights.org/national-center-for-civil-and-human-rights-observes-the-117th-anniversary-of-the-1906-atlanta-race-massacre-a-week-of-truth-commemoration-and-transformation/",
+      "status": 403,
+      "finalUrl": "https://www.civilandhumanrights.org/national-center-for-civil-and-human-rights-observes-the-117th-anniversary-of-the-1906-atlanta-race-massacre-a-week-of-truth-commemoration-and-transformation/",
+      "blocked": false
+    },
+    {
+      "url": "https://www.civilandhumanrights.org/unearthing-the-past-identifying-victims-of-the-1906-atlanta-race-massacre/",
+      "status": 403,
+      "finalUrl": "https://www.civilandhumanrights.org/unearthing-the-past-identifying-victims-of-the-1906-atlanta-race-massacre/",
+      "blocked": false
+    },
+    {
+      "url": "https://www.civilandhumanrights.org/wp-content/uploads/2022/08/1906-Atlanta-Race-Massacre-A-brief-history-NCCHR42.pdf",
+      "status": 200,
+      "finalUrl": "https://www.civilandhumanrights.org/wp-content/uploads/2022/08/1906-Atlanta-Race-Massacre-A-brief-history-NCCHR42.pdf",
+      "blocked": false
+    },
+    {
+      "url": "https://www.fbi.gov/history/field-office-histories/atlanta",
+      "status": 200,
+      "finalUrl": "https://www.fbi.gov/history/field-office-histories/atlanta",
+      "blocked": false
+    },
+    {
+      "url": "https://www.fbi.gov/news/stories/-serial-killers-part-5-wayne-williams-and-the-atlanta-child-murders",
+      "status": 200,
+      "finalUrl": "https://www.fbi.gov/news/stories/-serial-killers-part-5-wayne-williams-and-the-atlanta-child-murders",
+      "blocked": false
+    },
+    {
+      "url": "https://www.georgiaencyclopedia.org/articles/business-economy/alonzo-herndon-1858-1927/",
+      "status": 200,
+      "finalUrl": "https://www.georgiaencyclopedia.org/articles/business-economy/alonzo-herndon-1858-1927/",
+      "blocked": false
+    },
+    {
+      "url": "https://www.georgiaencyclopedia.org/articles/education/annie-l-mcpheeters-1908-1994/",
+      "status": 200,
+      "finalUrl": "https://www.georgiaencyclopedia.org/articles/education/annie-l-mcpheeters-1908-1994/",
+      "blocked": false
+    },
+    {
+      "url": "https://www.georgiaencyclopedia.org/articles/education/horace-mann-bond-1904-1972/",
+      "status": 200,
+      "finalUrl": "https://www.georgiaencyclopedia.org/articles/education/horace-mann-bond-1904-1972/",
+      "blocked": false
+    },
+    {
+      "url": "https://www.georgiaencyclopedia.org/articles/history-archaeology/atlanta-race-massacre-of-1906/",
+      "status": 200,
+      "finalUrl": "https://www.georgiaencyclopedia.org/articles/history-archaeology/atlanta-race-massacre-of-1906/",
+      "blocked": false
+    },
+    {
+      "url": "https://www.georgiaencyclopedia.org/articles/history-archaeology/grace-towns-hamilton-1907-1992/",
+      "status": 200,
+      "finalUrl": "https://www.georgiaencyclopedia.org/articles/history-archaeology/grace-towns-hamilton-1907-1992/",
+      "blocked": false
+    },
+    {
+      "url": "https://www.georgiaencyclopedia.org/articles/history-archaeology/jean-childs-young-1933-1994/",
+      "status": 200,
+      "finalUrl": "https://www.georgiaencyclopedia.org/articles/history-archaeology/jean-childs-young-1933-1994/",
+      "blocked": false
+    },
+    {
+      "url": "https://www.georgiaencyclopedia.org/articles/history-archaeology/john-wesley-dobbs-1882-1961/",
+      "status": 200,
+      "finalUrl": "https://www.georgiaencyclopedia.org/articles/history-archaeology/john-wesley-dobbs-1882-1961/",
+      "blocked": false
+    },
+    {
+      "url": "https://www.georgiawomen.org/ludie-clay-andrews",
+      "status": 200,
+      "finalUrl": "https://www.georgiawomen.org/ludie-clay-andrews",
+      "blocked": false
+    },
+    {
+      "url": "https://www.johnandlillianmileslewisfoundation.org/lillianmileslewis",
+      "status": 200,
+      "finalUrl": "https://www.johnandlillianmileslewisfoundation.org/lillianmileslewis",
+      "blocked": false
+    },
+    {
+      "url": "https://www.legacy.com/person/carolyn-d.-yancey-5873735",
+      "status": 403,
+      "finalUrl": "https://www.legacy.com/person/carolyn-d.-yancey-5873735",
+      "blocked": true
+    },
+    {
+      "url": "https://www.loc.gov/item/2004676664/",
+      "status": 403,
+      "finalUrl": "https://www.loc.gov/item/2004676664/",
+      "blocked": true
+    },
+    {
+      "url": "https://www.loc.gov/item/99472436/",
+      "status": 403,
+      "finalUrl": "https://www.loc.gov/item/99472436/",
+      "blocked": true
+    },
+    {
+      "url": "https://www.nps.gov/semo/learn/historyculture/bloody-sunday.htm",
+      "status": 200,
+      "finalUrl": "https://www.nps.gov/semo/learn/historyculture/bloody-sunday.htm",
+      "blocked": false
+    },
+    {
+      "url": "https://www.pbs.org/video/uncovering-the-1906-atlanta-race-massacre-naazr6/",
+      "status": 200,
+      "finalUrl": "https://www.pbs.org/video/uncovering-the-1906-atlanta-race-massacre-naazr6/",
+      "blocked": false
+    },
+    {
+      "url": "https://www.southviewpreservation.com/alonzoherndon",
+      "status": 200,
+      "finalUrl": "https://www.southviewpreservation.com/alonzoherndon",
+      "blocked": false
+    },
+    {
+      "url": "https://www.southviewpreservation.com/annielmcpheeters",
+      "status": 200,
+      "finalUrl": "https://www.southviewpreservation.com/annielmcpheeters",
+      "blocked": false
+    },
+    {
+      "url": "https://www.southviewpreservation.com/bazolineeusher",
+      "status": 200,
+      "finalUrl": "https://www.southviewpreservation.com/bazolineeusher",
+      "blocked": false
+    },
+    {
+      "url": "https://www.southviewpreservation.com/benjaminemays",
+      "status": 200,
+      "finalUrl": "https://www.southviewpreservation.com/benjaminemays",
+      "blocked": false
+    },
+    {
+      "url": "https://www.southviewpreservation.com/carolyndyancey",
+      "status": 200,
+      "finalUrl": "https://www.southviewpreservation.com/carolyndyancey",
+      "blocked": false
+    },
+    {
+      "url": "https://www.southviewpreservation.com/gracetownshamilton",
+      "status": 200,
+      "finalUrl": "https://www.southviewpreservation.com/gracetownshamilton",
+      "blocked": false
+    },
+    {
+      "url": "https://www.southviewpreservation.com/historyintheneighborhood",
+      "status": 200,
+      "finalUrl": "https://www.southviewpreservation.com/historyintheneighborhood",
+      "blocked": false
+    },
+    {
+      "url": "https://www.southviewpreservation.com/horacemannbond",
+      "status": 200,
+      "finalUrl": "https://www.southviewpreservation.com/horacemannbond",
+      "blocked": false
+    },
+    {
+      "url": "https://www.southviewpreservation.com/jeanchildsyoung",
+      "status": 200,
+      "finalUrl": "https://www.southviewpreservation.com/jeanchildsyoung",
+      "blocked": false
+    },
+    {
+      "url": "https://www.southviewpreservation.com/johnlewis",
+      "status": 200,
+      "finalUrl": "https://www.southviewpreservation.com/johnlewis",
+      "blocked": false
+    },
+    {
+      "url": "https://www.southviewpreservation.com/johnwdobbs",
+      "status": 200,
+      "finalUrl": "https://www.southviewpreservation.com/johnwdobbs",
+      "blocked": false
+    },
+    {
+      "url": "https://www.southviewpreservation.com/lillianmileslewis",
+      "status": 200,
+      "finalUrl": "https://www.southviewpreservation.com/lillianmileslewis",
+      "blocked": false
+    },
+    {
+      "url": "https://www.southviewpreservation.com/ludieclayandrews",
+      "status": 200,
+      "finalUrl": "https://www.southviewpreservation.com/ludieclayandrews",
+      "blocked": false
+    },
+    {
+      "url": "https://www.wsbtv.com/news/local/atlanta/what-is-south-view-cemetery-heres-history-where-john-lewis-is-buried/CSKPZVG6PFFJXKD3XKCOPKRP2I/",
+      "status": 200,
+      "finalUrl": "https://www.wsbtv.com/news/local/atlanta/what-is-south-view-cemetery-heres-history-where-john-lewis-is-buried/CSKPZVG6PFFJXKD3XKCOPKRP2I/",
+      "blocked": false
+    }
+  ]
+}
