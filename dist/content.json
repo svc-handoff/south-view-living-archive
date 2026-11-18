@@ -381,7 +381,13 @@
           "fit": "contain"
         }
       ],
-      "introSource": "https://www.fbi.gov/news/stories/-serial-killers-part-5-wayne-williams-and-the-atlanta-child-murders"
+      "introSource": "https://www.fbi.gov/news/stories/-serial-killers-part-5-wayne-williams-and-the-atlanta-child-murders",
+      "cardImage": {
+        "file": "children-memorial-wall.jpeg",
+        "alt": "Architectural rendering of Atlanta’s Children’s Eternal Flame Memorial with a curved remembrance wall and flame",
+        "credit": "Gordon Huether + Partners · Memorial design rendering",
+        "url": "https://gordonhuether.com/eternal-flame-memorial/"
+      }
     },
     {
       "id": "civil",

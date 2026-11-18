@@ -62,6 +62,10 @@ const ledger = JSON.parse(readFileSync(new URL('../dist/asset-ledger.json', impo
 const assets = new Map(ledger.assets.map(item => [item.file, item]));
 for (const person of Object.values(archive.people)) if (person.image && (!assets.get(person.image)?.credit || !assets.get(person.image)?.sourceUrl)) throw new Error(`Portrait missing from ledger: ${person.id}`);
 for (const event of archive.events) for (const visual of event.visuals) if (!assets.has(visual.file) || (visual.file !== 'remembrance.svg' && !assets.get(visual.file).sourceUrl)) throw new Error(`Visual missing from ledger: ${visual.file}`);
+for (const event of archive.events) if (event.cardImage) {
+  const card = event.cardImage;
+  if (!card.alt || !card.credit || !card.url?.startsWith('https://') || !existsSync(new URL(`../dist/assets/${card.file}`, import.meta.url)) || !assets.get(card.file)?.sourceUrl) throw new Error(`Incomplete homepage image: ${event.id}`);
+}
 if (!archive.editorial?.updated || !archive.editorial?.members?.length) throw new Error('Missing editorial attribution');
 writeFileSync(new URL('../dist/data.js', import.meta.url), `// Generated from content.json by node scripts/build-data.mjs\nwindow.ARCHIVE=${JSON.stringify(archive)};\n`);
 console.log(`Validated ${archive.events.length} chapters and ${Object.keys(archive.people).length} profiles; regenerated dist/data.js.`);

@@ -171,7 +171,7 @@
       "sourceUrl": "",
       "usage": [
         "Visual archive: Atlanta Child Murders",
-        "Chapter hero and homepage card"
+        "Chapter hero"
       ],
       "rights": "Existing original commemorative illustration for the student archive; creator credit retained. No new image was generated in this revision."
     },
@@ -228,13 +228,13 @@
     },
     {
       "file": "children-memorial-wall.jpeg",
-      "title": "children-memorial-wall",
-      "credit": "Legacy file; credit not independently established",
-      "sourceUrl": "",
+      "title": "Children’s Eternal Flame Memorial design rendering",
+      "credit": "Gordon Huether + Partners; credit visible in the existing image",
+      "sourceUrl": "https://gordonhuether.com/eternal-flame-memorial/",
       "usage": [
-        "Unused legacy asset"
+        "Homepage: Atlanta Child Murders chapter card"
       ],
-      "rights": "Do not introduce into a published page without source and permission checks."
+      "rights": "Existing project asset bearing Gordon Huether + Partners copyright credit. Separate publication permission is not documented in the repository."
     },
     {
       "file": "children.svg",
