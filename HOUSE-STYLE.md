@@ -8,9 +8,9 @@ Use plain, specific sentences in the third person and past tense for a person's 
 
 Every date, number, quotation, and disputed fact needs a source. Every factual paragraph needs at least one citation. Cut claims that cannot be traced. Attribute praise. Explain disagreements and cite both sources.
 
-The renderer places linked surname or organization tags after dated, numbered, quoted, or disputed sentences and at the end of each factual paragraph. A source URL must identify the actual supporting page. Books may use an unlinked surname, short title, and page number.
+The renderer places linked surname or organization tags after dated, numbered, quoted, or disputed sentences and at the end of each factual paragraph. A source URL must identify the actual supporting page. Sentence-ending punctuation follows the tag: `Historical statement (Robinson).` Multiple sources share a tag separated by semicolons. Books use an unlinked surname, italic short title, and page number: `(Mays, Born to Rebel, 14).` The book title is italicized in the rendered citation.
 
-List each source once under Sources, giving author or organization, title, site or publisher, year if known, and a permanent link. Do not use Wikipedia, search results, or access dates in the finished source lists.
+List each source once under Sources, giving author or organization, title, site or publisher, year if known, and a permanent link. Source-list fields are separated by centered dots rather than MLA-style punctuation. Book titles are italicized. Do not use Wikipedia, search results, or access dates in the finished source lists.
 
 ## Full biographies
 

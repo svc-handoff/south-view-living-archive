@@ -14,22 +14,48 @@ function eventArt(e) {
   return `<figure class="event-visual ${e.id === 'children' ? 'illustrated-event' : 'archival-event'}"><button class="event-image-frame" data-visual-event="${esc(e.id)}" data-visual-index="${visualIndex}" aria-label="Enlarge image: ${esc(visual.alt)}" aria-haspopup="dialog"><span class="visual-corner-label">${esc(visual.type)}</span><img src="assets/${visual.file}" alt="${esc(visual.alt)}" fetchpriority="high"><span class="visual-orbit" aria-hidden="true"></span></button><figcaption><p>${esc(visual.caption)}</p><span>${visual.url ? link(visual.url, visual.credit + ' ↗') : esc(visual.credit)}</span></figcaption></figure>`;
 }
 const pic = p => `<div class="portrait">${p.image ? `<img src="assets/${encodeURIComponent(p.image)}" alt="Portrait of ${esc(p.name)}" loading="lazy">` : `<span aria-hidden="true">${esc(p.name.split(' ').map(s => s[0]).slice(0, 2).join(''))}</span>`}</div>`;
-const sourceName = source => source.tag || source.author || source.organization || source.name.split(' — ')[0];
-const citation = source => source ? `<span class="citation">(${source.url ? link(source.url, sourceName(source)) : esc(sourceName(source))})</span>` : '';
+const authorSurnames = author => author.split(/\s+and\s+/u).map(name => name.trim().split(/\s+/u).at(-1)).join(' and ');
+const sourceName = source => source.tag || (source.author ? authorSurnames(source.author) : source.organization || source.name.split(' — ')[0]);
+function citation(source) {
+  const list = (Array.isArray(source) ? source : [source]).filter(Boolean);
+  const unique = [...new Map(list.map(s => [s.url || `${s.author}|${s.title}|${s.page || ''}`, s])).values()];
+  if (!unique.length) return '';
+  const tags = unique.map(s => {
+    if (s.type === 'book') {
+      const author = s.author ? `${esc(authorSurnames(s.author))}, ` : '';
+      return `${author}<em>${esc(s.shortTitle || s.title)}</em>${s.page ? `, ${esc(s.page)}` : ''}`;
+    }
+    if (s.url) return link(s.url, sourceName(s));
+    return s.author ? esc(authorSurnames(s.author)) : `<em>${esc(s.shortTitle || s.title || sourceName(s))}</em>`;
+  });
+  return `<span class="citation">(${tags.join('; ')})</span>`;
+}
 const findSource = (url, list = []) => list.find(s => s.url === url) || data.sources.find(s => s.url === url);
 function cited(text, source, extra = []) {
   if (!text) return '';
-  const sentences = new Intl.Segmenter('en', {granularity: 'sentence'}).segment(text);
-  const parts = [...sentences];
+  const parts = [...new Intl.Segmenter('en', {granularity: 'sentence'}).segment(text)];
   return parts.map((part, index) => {
     const sentence = part.segment.trim();
     const needsTag = index === parts.length - 1 || /\d|\b(one|two|three|four|five|six|seven|eight|nine|ten|first|only|differ|disagree)\b|[“”"]/iu.test(sentence);
-    return `${esc(sentence)}${needsTag ? ` ${citation(source)} ${extra.map(citation).join(' ')}` : ''}`;
+    const tag = needsTag ? citation([source, ...extra]) : '';
+    if (!tag) return esc(sentence);
+    // Keep abbreviation periods; move sentence punctuation after the citation.
+    const abbreviation = /\b(?:[A-Z]\.){2,}$|\b(?:Jr|Sr|Inc|Co|Ltd)\.$/u.test(sentence);
+    const ending = abbreviation ? null : sentence.match(/([.!?…])([”"’')\]]*)$/u);
+    const body = ending ? sentence.slice(0, ending.index) + ending[2] : sentence;
+    return `${esc(body)} ${tag}${ending ? ending[1] : '.'}`;
   }).join(' ');
 }
 function sources(list, note = '') {
-  const unique = [...new Map(list.filter(Boolean).map(s => [s.url || s.name, s])).values()];
-  return `<section class="sources" aria-labelledby="sources-title"><h2 id="sources-title">Sources</h2><ul>${unique.map(s => `<li>${esc(s.author || s.organization || sourceName(s))}. ${s.type === 'book' ? `<em>${esc(s.title)}</em>` : esc(s.title || s.name.split(' — ').slice(1).join(' — ') || s.name)}. ${esc(s.site || '')}${s.year ? `, ${esc(s.year)}` : ''}${s.url ? ` · ${link(s.url, 'Read source ↗')}` : ''}</li>`).join('')}</ul>${note ? `<p>${esc(note)}</p>` : ''}</section>`;
+  const unique = [...new Map(list.filter(Boolean).map(s => [s.url || `${s.author || s.organization}|${s.title}|${s.year || ''}`, s])).values()];
+  const rows = unique.map(s => {
+    const title = s.title || s.name.split(' — ').slice(1).join(' — ') || s.name;
+    const fields = [esc(s.author || s.organization || sourceName(s)), s.type === 'book' ? `<em>${esc(title)}</em>` : esc(title), esc(s.site || '')];
+    if (s.year) fields.push(esc(s.year));
+    if (s.url) fields.push(link(s.url, 'Read source'));
+    return `<li>${fields.filter(Boolean).join(' · ')}</li>`;
+  });
+  return `<section class="sources" aria-labelledby="sources-title"><h2 id="sources-title">Sources</h2><ul>${rows.join('')}</ul>${note ? `<p>${esc(note)}</p>` : ''}</section>`;
 }
 const timeline = e => e.timeline?.length ? `<section class="event-timeline" aria-label="${esc(e.title)} timeline"><div class="eyebrow">Follow the history</div><h2>A few defining moments</h2><ol>${e.timeline.map(t => `<li><div class="eyebrow">${esc(t.date)}</div><h3>${esc(t.title)}</h3><p>${cited(t.text, findSource(t.url, e.sources))}</p></li>`).join('')}</ol></section>` : '';
 
@@ -74,7 +100,12 @@ function eventPage(e) {
 
 function personPage(p) {
   const e = data.events.find(x => x.people.includes(p.id));
-  const src = p.sources;
+  const src = [...p.sources];
+  const contextualImage = e.visuals?.[p.visualIndex || 0];
+  for (const url of [p.imageSource, contextualImage?.url]) {
+    const imageSource = url && findSource(url);
+    if (imageSource && !src.some(s => s.url === url)) src.push(imageSource);
+  }
   const overviewSource = findSource(p.introSource, src);
   const burialSource = p.burial.url ? findSource(p.burial.url, src) : p.sources.find(s => s.type === 'book');
   const headings = p.format === 'short' ? ['Remembrance', 'Documented events', 'Atlanta and South-View Connection'] : ['Overview', 'Life and Contributions', 'Atlanta and South-View Connection'];
@@ -103,7 +134,7 @@ function renderPreview(id) {
   selectedPerson = id;
   document.querySelectorAll('[data-person]').forEach(node => node.setAttribute('aria-expanded', String(node.dataset.person === id)));
   const moment = p.chapters[0];
-  personDialog.innerHTML = `<button class="dialog-close" aria-label="Close story" autofocus>×</button><div class="dialog-layout"><aside class="dialog-visual">${pic(p)}<span class="eyebrow">A LIFE IN THE ARCHIVE</span><span class="dialog-chapter-name">${esc(e.title)}</span><span class="dialog-petal" aria-hidden="true"></span></aside><article class="dialog-content"><div class="eyebrow">${esc(p.connection || 'A life connected to this history')}</div><h2 id="dialog-person-name">${esc(p.name)}</h2><p class="dialog-role" id="dialog-person-role">${esc(p.role)}</p><p class="dialog-intro">${cited(p.intro, findSource(p.introSource, p.sources))}</p><div class="dialog-moment"><div class="eyebrow">${esc(moment.date)}</div><h3>${esc(moment.title)}</h3><p>${cited(moment.text, findSource(moment.url, p.sources))}</p></div><div class="dialog-actions"><a class="btn" data-full-story href="#/person/${esc(id)}">${p.format === 'short' ? 'Read the remembrance' : 'Read the full story'} <span aria-hidden="true">↗</span></a><span>Life, cemetery connection and sources</span></div></article></div><div class="dialog-footer"><span>${String(index + 1).padStart(2, '0')} <span class="dialog-counter-divider">/</span> ${String(e.people.length).padStart(2, '0')} <span class="dialog-footer-label">lives in this chapter</span></span><div><button class="person-step" data-person-step="-1" aria-label="Previous person">←</button><button class="person-step" data-person-step="1" aria-label="Next person">→</button></div></div>`;
+  personDialog.innerHTML = `<button class="dialog-close" aria-label="Close story" autofocus>×</button><div class="dialog-layout"><aside class="dialog-visual">${pic(p)}<span class="eyebrow">A LIFE IN THE ARCHIVE</span><span class="dialog-chapter-name">${esc(e.title)}</span><span class="dialog-petal" aria-hidden="true"></span></aside><article class="dialog-content"><div class="eyebrow">${esc(p.connection || 'A life connected to this history')}</div><h2 id="dialog-person-name">${esc(p.name)}</h2><p class="dialog-role" id="dialog-person-role">${esc(p.role)}</p><p class="dialog-intro">${cited(p.intro, findSource(p.introSource, p.sources))}</p><div class="dialog-moment"><div class="eyebrow">${esc(moment.date)}</div><h3>${esc(moment.title)}</h3><p>${cited(moment.text, findSource(moment.url, p.sources), (moment.additionalSources || []).map(url => findSource(url, p.sources)))}</p></div><div class="dialog-actions"><a class="btn" data-full-story href="#/person/${esc(id)}">${p.format === 'short' ? 'Read the remembrance' : 'Read the full story'} <span aria-hidden="true">↗</span></a><span>Life, cemetery connection and sources</span></div></article></div><div class="dialog-footer"><span>${String(index + 1).padStart(2, '0')} <span class="dialog-counter-divider">/</span> ${String(e.people.length).padStart(2, '0')} <span class="dialog-footer-label">lives in this chapter</span></span><div><button class="person-step" data-person-step="-1" aria-label="Previous person">←</button><button class="person-step" data-person-step="1" aria-label="Next person">→</button></div></div>`;
   personDialog.scrollTop = 0;
 }
 

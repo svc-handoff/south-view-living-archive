@@ -31,6 +31,7 @@ jobs:
       - name: Validate content and rebuild browser data
         run: |
           node scripts/build-data.mjs
+          node scripts/check-citations.mjs
           node --check dist/app.js
           node --check dist/experience.js
           node --check dist/data.js

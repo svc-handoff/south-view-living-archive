@@ -265,7 +265,8 @@
           "year": 2018,
           "type": "book",
           "page": 6,
-          "url": ""
+          "url": "",
+          "shortTitle": "South-View"
         },
         {
           "name": "South-View Preservation Foundation — Jean Childs Young",
@@ -474,8 +475,8 @@
         {
           "name": "Building power before the headlines",
           "url": "https://www.georgiaencyclopedia.org/articles/history-archaeology/john-wesley-dobbs-1882-1961/",
-          "organization": "Building power before the headlines",
-          "title": "Building power before the headlines",
+          "organization": "New Georgia Encyclopedia",
+          "title": "John Wesley Dobbs",
           "site": "New Georgia Encyclopedia",
           "type": "website",
           "tag": "Bailey",
@@ -485,13 +486,22 @@
         {
           "name": "Many routes toward equality",
           "url": "https://www.georgiaencyclopedia.org/articles/education/horace-mann-bond-1904-1972/",
-          "organization": "Many routes toward equality",
-          "title": "Many routes toward equality",
+          "organization": "New Georgia Encyclopedia",
+          "title": "Horace Mann Bond",
           "site": "New Georgia Encyclopedia",
           "type": "website",
           "tag": "Huff",
           "author": "Christopher Allen Huff",
           "year": 2007
+        },
+        {
+          "name": "National Park Service — Selma to Montgomery March",
+          "organization": "National Park Service",
+          "tag": "National Park Service",
+          "title": "Selma to Montgomery March",
+          "site": "National Park Service",
+          "type": "website",
+          "url": "https://home.nps.gov/articles/selmatomongtomerymarch.htm"
         }
       ],
       "overview": [
@@ -1086,7 +1096,8 @@
           "year": 2018,
           "type": "book",
           "page": 6,
-          "url": ""
+          "url": "",
+          "shortTitle": "South-View"
         }
       ],
       "image": null,
@@ -1147,7 +1158,8 @@
           "year": 2018,
           "type": "book",
           "page": 6,
-          "url": ""
+          "url": "",
+          "shortTitle": "South-View"
         }
       ],
       "image": null,
@@ -1208,7 +1220,8 @@
           "year": 2018,
           "type": "book",
           "page": 6,
-          "url": ""
+          "url": "",
+          "shortTitle": "South-View"
         }
       ],
       "image": null,
@@ -1269,7 +1282,8 @@
           "year": 2018,
           "type": "book",
           "page": 6,
-          "url": ""
+          "url": "",
+          "shortTitle": "South-View"
         }
       ],
       "image": null,
@@ -1330,7 +1344,8 @@
           "year": 2018,
           "type": "book",
           "page": 6,
-          "url": ""
+          "url": "",
+          "shortTitle": "South-View"
         }
       ],
       "image": null,
@@ -1391,7 +1406,8 @@
           "year": 2018,
           "type": "book",
           "page": 6,
-          "url": ""
+          "url": "",
+          "shortTitle": "South-View"
         }
       ],
       "image": null,
@@ -1452,7 +1468,8 @@
           "year": 2018,
           "type": "book",
           "page": 6,
-          "url": ""
+          "url": "",
+          "shortTitle": "South-View"
         }
       ],
       "image": null,
@@ -1925,8 +1942,8 @@
         {
           "name": "Building power before the headlines",
           "url": "https://www.georgiaencyclopedia.org/articles/history-archaeology/john-wesley-dobbs-1882-1961/",
-          "organization": "Building power before the headlines",
-          "title": "Building power before the headlines",
+          "organization": "New Georgia Encyclopedia",
+          "title": "John Wesley Dobbs",
           "site": "New Georgia Encyclopedia",
           "type": "website",
           "tag": "Bailey",
@@ -1956,10 +1973,11 @@
           "organization": "Amistad Research Center",
           "title": "John Wesley Dobbs Family papers (1873–2001)",
           "site": "Amistad Research Center",
-          "tag": "Amistad Research Center",
+          "tag": "Moore",
           "type": "archive",
           "url": "https://amistadresearch.wordpress.com/2011/05/09/john-wesley-dobbs-family-papers-1873-2001/",
-          "year": 2011
+          "year": 2011,
+          "author": "Amber L. Moore"
         }
       ],
       "image": "johnwdobbs.jpg",
@@ -2355,8 +2373,8 @@
         {
           "name": "Many routes toward equality",
           "url": "https://www.georgiaencyclopedia.org/articles/education/horace-mann-bond-1904-1972/",
-          "organization": "Many routes toward equality",
-          "title": "Many routes toward equality",
+          "organization": "New Georgia Encyclopedia",
+          "title": "Horace Mann Bond",
           "site": "New Georgia Encyclopedia",
           "type": "website",
           "tag": "Huff",
@@ -2906,8 +2924,8 @@
     {
       "name": "Building power before the headlines",
       "url": "https://www.georgiaencyclopedia.org/articles/history-archaeology/john-wesley-dobbs-1882-1961/",
-      "organization": "Building power before the headlines",
-      "title": "Building power before the headlines",
+      "organization": "New Georgia Encyclopedia",
+      "title": "John Wesley Dobbs",
       "site": "New Georgia Encyclopedia",
       "type": "website",
       "tag": "Bailey",
@@ -2917,8 +2935,8 @@
     {
       "name": "Many routes toward equality",
       "url": "https://www.georgiaencyclopedia.org/articles/education/horace-mann-bond-1904-1972/",
-      "organization": "Many routes toward equality",
-      "title": "Many routes toward equality",
+      "organization": "New Georgia Encyclopedia",
+      "title": "Horace Mann Bond",
       "site": "New Georgia Encyclopedia",
       "type": "website",
       "tag": "Huff",
@@ -3247,10 +3265,11 @@
       "organization": "Amistad Research Center",
       "title": "John Wesley Dobbs Family papers (1873–2001)",
       "site": "Amistad Research Center",
-      "tag": "Amistad Research Center",
+      "tag": "Moore",
       "type": "archive",
       "url": "https://amistadresearch.wordpress.com/2011/05/09/john-wesley-dobbs-family-papers-1873-2001/",
-      "year": 2011
+      "year": 2011,
+      "author": "Amber L. Moore"
     },
     {
       "name": "Auburn Avenue Research Library / Digital Library of Georgia — John Wesley Dobbs, from the Annie L. McPheeters papers",
@@ -3359,6 +3378,15 @@
       "site": "AUC Woodruff Library",
       "type": "archive",
       "url": "https://www.auctr.edu/archives-and-collections/digital-collections/"
+    },
+    {
+      "name": "National Park Service — Selma to Montgomery March",
+      "organization": "National Park Service",
+      "tag": "National Park Service",
+      "title": "Selma to Montgomery March",
+      "site": "National Park Service",
+      "type": "website",
+      "url": "https://home.nps.gov/articles/selmatomongtomerymarch.htm"
     }
   ]
 }
